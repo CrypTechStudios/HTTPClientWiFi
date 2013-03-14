@@ -1,6 +1,10 @@
-# HTTPClient for Arduino
+# WiFi HTTPClient for Arduino
 
 ## Overview
+This is a modified version of Interactive Matter's HTTPClient code that works with official Arduino WiFi Shield and has a few minor bugfixes.  Please generate issues if you find any bugs.
+
+Thanks,
+RWSDev Team
 
 An Arduino HTTP Client that uses the Arduino Ethernet Library to make HTTP requests
 and handle responses.
