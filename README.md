@@ -6,19 +6,33 @@ This is a modified version of Interactive Matter's HTTPClient code that works wi
 Thanks,
 RWSDev Team
 
-An Arduino HTTP Client that uses the Arduino Ethernet Library to make HTTP requests
+An Arduino HTTP Client that uses the Arduino WiFi Library to make HTTP requests
 and handle responses.
 
 ## Usage
   
 ### Creating a HTTP Client
 
-HTTP Client works with the Arduino Ethernet Library. Before you can create
-a HTTP client you must initialize your ethernet connection with something 
+HTTP Client works with the Arduino WiFi Library. Before you can create
+a HTTP client you must initialize your WiFi connection with something 
 like:
 
 ```c++
-Ethernet.begin(mac, ip);
+char ssid[] = "YOUR_SSID"; //  your network SSID (name) 
+char pass[] = "YOUR_PASSWORD";    // your network password (use for WPA, or use as key for WEP)
+int keyIndex = 0;            // your network key Index number (needed only for WEP)
+
+WiFiClient client;
+
+void setup(void) {
+  while ( status != WL_CONNECTED) { 
+    Serial.print("Attempting to connect to SSID: ");
+    Serial.println(ssid);
+    status = WiFi.begin(ssid, pass);
+    // wait 10 seconds for connection:
+    delay(10000);
+  } 
+}
 ```
 
 For details on this see http://arduino.cc/en/Reference/ServerBegin
