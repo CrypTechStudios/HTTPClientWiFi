@@ -127,6 +127,7 @@ not work.
 
 ## Contributions
 
+* Thanks to [interactive-matter](https://github.com/interactive-matter/HTTPClient) for the original HTTPClient
 * Thanks to [colagrosso](http://github.com/colagrosso) for fixing the URL encoding
 * Thanks to [hex705](http://github.com/hex705) for properly porting it to Arduino 1.0
 
